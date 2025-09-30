@@ -124,11 +124,15 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Tajawal', 'IBM Plex Sans Arabic', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+
+  * {
+    direction: rtl;
   }
 }
 

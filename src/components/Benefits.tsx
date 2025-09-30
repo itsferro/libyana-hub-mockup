@@ -1,49 +1,49 @@
+import { CheckCircle2, Users, TrendingUp, Shield, Star, Zap, Globe, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { Check, Zap, Shield, TrendingUp, Users, Award, Globe } from "lucide-react";
 
 const creatorBenefits = [
   {
-    icon: Zap,
-    title: "Quick Setup",
-    description: "Start selling in minutes with our intuitive platform"
+    icon: TrendingUp,
+    title: "فرص دخل متعددة",
+    description: "حقق دخلاً ثابتاً من خلال محتواك الرقمي"
   },
   {
-    icon: TrendingUp,
-    title: "Maximize Earnings",
-    description: "Keep up to 80% of your sales revenue"
+    icon: Zap,
+    title: "أدوات احترافية",
+    description: "أدوات متقدمة لإدارة المحتوى والتواصل مع المشتركين"
   },
   {
     icon: Users,
-    title: "Built-in Audience",
-    description: "Reach thousands of potential customers instantly"
+    title: "قاعدة عملاء واسعة",
+    description: "وصول مباشر لعملاء ليبيانا موبايل"
   },
   {
     icon: Shield,
-    title: "Secure Transactions",
-    description: "Protected payments and content delivery"
+    title: "دفع مرن وآمن",
+    description: "استلم أرباحك بسهولة عبر نظام الدفع الآمن"
   }
 ];
 
-const userBenefits = [
+const subscriberBenefits = [
+  {
+    icon: Star,
+    title: "محتوى محلي عالي الجودة",
+    description: "تعلم من مبدعين ليبيين في مختلف المجالات"
+  },
   {
     icon: Globe,
-    title: "Vast Selection",
-    description: "Access 50,000+ digital products and resources"
+    title: "تفاعل مباشر",
+    description: "تواصل مباشر مع المدربين والمبدعين"
+  },
+  {
+    icon: CheckCircle2,
+    title: "خيارات دفع متعددة",
+    description: "ادفع بسهولة عبر رصيد ليبيانا أو البطاقة البنكية"
   },
   {
     icon: Award,
-    title: "Quality Guaranteed",
-    description: "All content reviewed and verified by our team"
-  },
-  {
-    icon: Zap,
-    title: "Instant Access",
-    description: "Download and use immediately after purchase"
-  },
-  {
-    icon: Shield,
-    title: "Money-Back Guarantee",
-    description: "30-day refund policy on all purchases"
+    title: "تتبع التقدم",
+    description: "راقب تقدمك وإنجازاتك في رحلة التعلم"
   }
 ];
 
@@ -54,90 +54,86 @@ const Benefits = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-4 text-gradient">
-            Why Choose LibyanaHub?
+            لماذا ليبيانا هب؟
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Benefits for everyone - whether you're creating or consuming content
+            منصة شاملة تلبي احتياجات المبدعين والمشتركين على حد سواء
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* For Creators */}
-          <div className="animate-fade-in">
-            <Card className="p-8 h-full gradient-primary relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32" />
-              
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6">
-                  <Zap className="w-5 h-5 text-yellow" />
-                  <span className="text-white font-semibold">For Creators</span>
-                </div>
-
-                <h3 className="text-3xl font-bold font-heading text-white mb-6">
-                  Monetize Your Creativity
-                </h3>
-
-                <div className="space-y-6">
-                  {creatorBenefits.map((benefit, index) => {
-                    const Icon = benefit.icon;
-                    return (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                          <Icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-1">
-                            {benefit.title}
-                          </h4>
-                          <p className="text-white/80">
-                            {benefit.description}
-                          </p>
-                        </div>
+          <div>
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold font-heading mb-2 text-foreground">
+                للمبدعين والمدربين
+              </h3>
+              <p className="text-muted-foreground">
+                ابدأ بمشاركة خبراتك واحصل على دخل ثابت
+              </p>
+            </div>
+            <div className="space-y-6">
+              {creatorBenefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-x-1"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary p-3 flex-shrink-0">
+                        <Icon className="w-full h-full text-white" />
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </Card>
+                      <div>
+                        <h4 className="text-lg font-bold font-heading mb-2 text-foreground">
+                          {benefit.title}
+                        </h4>
+                        <p className="text-muted-foreground">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
 
-          {/* For Users */}
-          <div className="animate-fade-in">
-            <Card className="p-8 h-full gradient-secondary relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32" />
-              
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm mb-6">
-                  <Users className="w-5 h-5 text-yellow" />
-                  <span className="text-white font-semibold">For Users</span>
-                </div>
-
-                <h3 className="text-3xl font-bold font-heading text-white mb-6">
-                  Access Premium Content
-                </h3>
-
-                <div className="space-y-6">
-                  {userBenefits.map((benefit, index) => {
-                    const Icon = benefit.icon;
-                    return (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                          <Icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-white mb-1">
-                            {benefit.title}
-                          </h4>
-                          <p className="text-white/80">
-                            {benefit.description}
-                          </p>
-                        </div>
+          {/* For Subscribers */}
+          <div>
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold font-heading mb-2 text-foreground">
+                للمشتركين والمتعلمين
+              </h3>
+              <p className="text-muted-foreground">
+                استكشف محتوى متنوع وطور مهاراتك
+              </p>
+            </div>
+            <div className="space-y-6">
+              {subscriberBenefits.map((benefit, index) => {
+                const Icon = benefit.icon;
+                return (
+                  <Card
+                    key={index}
+                    className="p-6 hover:shadow-card-hover transition-all duration-300 hover:-translate-x-1"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan p-3 flex-shrink-0">
+                        <Icon className="w-full h-full text-white" />
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </Card>
+                      <div>
+                        <h4 className="text-lg font-bold font-heading mb-2 text-foreground">
+                          {benefit.title}
+                        </h4>
+                        <p className="text-muted-foreground">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

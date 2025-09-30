@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
+        sans: ['Tajawal', 'IBM Plex Sans Arabic', 'sans-serif'],
+        heading: ['Cairo', 'Tajawal', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

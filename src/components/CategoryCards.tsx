@@ -1,69 +1,70 @@
-import { BookOpen, Code, Palette, Music, Video, TrendingUp, GraduationCap } from "lucide-react";
+import { Dumbbell, Heart, ChefHat, Palette, Briefcase, Video, BookOpen, ArrowLeft } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const categories = [
   {
-    icon: BookOpen,
-    title: "E-Books & Guides",
-    description: "Digital books, tutorials, and comprehensive guides",
-    color: "from-primary to-secondary",
-    stats: "2,500+ items"
+    icon: Dumbbell,
+    title: "التدريب الرياضي واللياقة",
+    description: "برامج تدريب مخصصة مع مدربين محترفين",
+    color: "from-orange-500 to-red-500",
+    stats: "٢٬٥٠٠+ برنامج"
   },
   {
-    icon: Code,
-    title: "Software & Apps",
-    description: "Applications, plugins, and digital tools",
-    color: "from-secondary to-accent",
-    stats: "1,200+ items"
+    icon: Heart,
+    title: "الاستشارات الصحية والمراقبة",
+    description: "استشارات طبية ومراقبة صحية مع أطباء مرخصين",
+    color: "from-blue-500 to-cyan-500",
+    stats: "١٬٢٠٠+ طبيب"
+  },
+  {
+    icon: ChefHat,
+    title: "الطبخ والوصفات",
+    description: "وصفات احترافية ودروس طبخ مباشرة",
+    color: "from-yellow-500 to-orange-400",
+    stats: "٨٬٠٠٠+ وصفة"
   },
   {
     icon: Palette,
-    title: "Design Assets",
-    description: "Templates, graphics, and creative resources",
-    color: "from-accent to-cyan",
-    stats: "8,000+ items"
+    title: "الفنون الإبداعية",
+    description: "تعلم الرسم والموسيقى والتصوير والتصميم",
+    color: "from-pink-500 to-purple-500",
+    stats: "٥٬٥٠٠+ درس"
   },
   {
-    icon: Music,
-    title: "Audio Content",
-    description: "Music tracks, sound effects, and audio guides",
-    color: "from-cyan to-primary",
-    stats: "5,500+ items"
+    icon: Briefcase,
+    title: "التطوير المهني والوظيفي",
+    description: "تطوير المهارات وبناء المسار الوظيفي",
+    color: "from-indigo-600 to-blue-500",
+    stats: "٣٬٨٠٠+ دورة"
   },
   {
     icon: Video,
-    title: "Video Courses",
-    description: "Educational videos and online courses",
-    color: "from-primary to-accent",
-    stats: "3,800+ items"
+    title: "البث المباشر والدورات",
+    description: "دورات تفاعلية مباشرة في جميع المجالات",
+    color: "from-red-500 to-pink-500",
+    stats: "١٬٩٠٠+ بث مباشر"
   },
   {
-    icon: TrendingUp,
-    title: "Business Tools",
-    description: "Templates, calculators, and business resources",
-    color: "from-secondary to-primary",
-    stats: "1,900+ items"
-  },
-  {
-    icon: GraduationCap,
-    title: "Learning Programs",
-    description: "Complete learning paths and certification programs",
-    color: "from-accent to-secondary",
-    stats: "950+ items"
+    icon: BookOpen,
+    title: "التدريس والدروس الخصوصية",
+    description: "دروس خصوصية في جميع المواد الدراسية",
+    color: "from-green-500 to-teal-500",
+    stats: "٩٥٠+ مدرس"
   }
 ];
 
 const CategoryCards = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="categories" className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-4 text-gradient">
-            Explore Our Categories
+            استكشف الفئات
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover diverse digital content across seven specialized categories
+            اختر المجال الذي يناسب اهتماماتك وابدأ رحلتك اليوم
           </p>
         </div>
 
@@ -93,12 +94,21 @@ const CategoryCards = () => {
                 </p>
                 
                 {/* Stats Badge */}
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-sm font-medium text-foreground relative z-10">
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-muted text-sm font-medium text-foreground relative z-10 mb-4">
                   {category.stats}
                 </div>
 
+                {/* Explore Button */}
+                <Button 
+                  variant="ghost" 
+                  className="group/btn hover:text-primary relative z-10 p-0"
+                >
+                  استكشف
+                  <ArrowLeft className="mr-2 w-4 h-4 group-hover/btn:-translate-x-1 transition-transform" />
+                </Button>
+
                 {/* Decorative Element */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -ml-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
               </Card>
             );
           })}

@@ -9,11 +9,11 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
+          {/* Company Info - Right Side for RTL */}
           <div>
-            <h3 className="text-2xl font-bold font-heading mb-4">LibyanaHub</h3>
+            <h3 className="text-2xl font-bold font-heading mb-4">ليبيانا هب</h3>
             <p className="text-white/80 mb-6">
-              Your ultimate platform for digital content creation and learning. Powered by Libyana Mobile.
+              منصة ليبيانا للمحتوى الرقمي - منصتك الشاملة لتمكين المبدعين المحليين. مدعوم من ليبيانا موبايل.
             </p>
             <div className="flex gap-3">
               <Button size="icon" variant="outline" className="bg-white/10 border-white/20 hover:bg-white/20 text-white rounded-full">
@@ -36,9 +36,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold font-heading mb-4">روابط سريعة</h4>
             <ul className="space-y-3">
-              {['About Us', 'How It Works', 'Categories', 'Pricing', 'Blog', 'Contact'].map((link) => (
+              {['من نحن', 'كيف تعمل المنصة', 'الفئات', 'الأسعار', 'المدونة', 'اتصل بنا'].map((link) => (
                 <li key={link}>
                   <a href="#" className="text-white/80 hover:text-white transition-colors">
                     {link}
@@ -50,9 +50,9 @@ const Footer = () => {
 
           {/* Categories */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-4">Categories</h4>
+            <h4 className="text-lg font-semibold font-heading mb-4">الفئات</h4>
             <ul className="space-y-3">
-              {['E-Books & Guides', 'Software & Apps', 'Design Assets', 'Audio Content', 'Video Courses', 'Business Tools'].map((category) => (
+              {['التدريب الرياضي', 'الاستشارات الصحية', 'الطبخ والوصفات', 'الفنون الإبداعية', 'التطوير المهني', 'البث المباشر', 'التدريس'].map((category) => (
                 <li key={category}>
                   <a href="#" className="text-white/80 hover:text-white transition-colors">
                     {category}
@@ -64,17 +64,17 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold font-heading mb-4">Contact Us</h4>
+            <h4 className="text-lg font-semibold font-heading mb-4">تواصل معنا</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
                 <span className="text-white/80">
-                  Tripoli, Libya
+                  طرابلس، ليبيا
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span className="text-white/80">
+                <span className="text-white/80" dir="ltr">
                   +218 XX XXX XXXX
                 </span>
               </li>
@@ -85,6 +85,17 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
+            <div className="mt-6">
+              <h5 className="font-semibold mb-3">حمل التطبيق</h5>
+              <div className="space-y-2">
+                <Button variant="outline" className="bg-white/10 border-white/20 hover:bg-white/20 text-white w-full justify-start">
+                  تحميل للأيفون
+                </Button>
+                <Button variant="outline" className="bg-white/10 border-white/20 hover:bg-white/20 text-white w-full justify-start">
+                  تحميل للأندرويد
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -93,20 +104,20 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/70 text-sm">
-              © {currentYear} LibyanaHub by Libyana Mobile. All rights reserved.
-            </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Privacy Policy
+                سياسة الخصوصية
               </a>
               <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Terms of Service
+                شروط الخدمة
               </a>
               <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Cookie Policy
+                سياسة الكوكيز
               </a>
             </div>
+            <p className="text-white/70 text-sm">
+              © {currentYear} ليبيانا هب - مدعوم من ليبيانا موبايل. جميع الحقوق محفوظة.
+            </p>
           </div>
         </div>
       </div>

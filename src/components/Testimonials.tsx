@@ -3,46 +3,46 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Ahmed",
-    role: "Digital Artist",
-    content: "LibyanaHub transformed my creative business. I've sold over 500 design templates and connected with amazing clients!",
+    name: "سارة أحمد",
+    role: "مدربة لياقة بدنية",
+    content: "ليبيانا هب غيرت حياتي المهنية تماماً. استطعت الوصول لأكثر من ٥٠٠ متدرب وبناء مجتمع رائع!",
     rating: 5,
-    avatar: "SA"
+    avatar: "س.أ"
   },
   {
-    name: "Mohamed Ali",
-    role: "Course Creator",
-    content: "The platform is incredibly easy to use. I launched my video course series and reached 1,000 students in just 3 months.",
+    name: "محمد علي",
+    role: "طبيب استشاري",
+    content: "المنصة سهلة الاستخدام وتوفر كل الأدوات اللازمة لتقديم استشارات طبية عن بعد بشكل احترافي.",
     rating: 5,
-    avatar: "MA"
+    avatar: "م.ع"
   },
   {
-    name: "Fatima Hassan",
-    role: "Software Developer",
-    content: "As a developer, I appreciate the secure payment system and instant delivery. Perfect for selling my apps and plugins.",
+    name: "فاطمة حسن",
+    role: "طاهية محترفة",
+    content: "أشارك وصفاتي وأقدم دروس طبخ مباشرة. المنصة وفرت لي فرصة رائعة لمشاركة شغفي مع الآخرين.",
     rating: 5,
-    avatar: "FH"
+    avatar: "ف.ح"
   },
   {
-    name: "Omar Ibrahim",
-    role: "Music Producer",
-    content: "Finally, a platform that understands creators! My audio tracks are reaching the right audience and generating consistent income.",
+    name: "عمر إبراهيم",
+    role: "فنان تشكيلي",
+    content: "وجدت في ليبيانا هب المنصة المثالية لتعليم الرسم والفنون. المتابعون متفاعلون والنظام سهل جداً.",
     rating: 5,
-    avatar: "OI"
+    avatar: "ع.إ"
   },
   {
-    name: "Layla Karim",
-    role: "Business Consultant",
-    content: "I've purchased countless business templates and tools here. The quality is exceptional and saves me hours of work.",
+    name: "ليلى كريم",
+    role: "مدربة تطوير مهني",
+    content: "ساعدتني المنصة في الوصول لشريحة واسعة من الباحثين عن التطوير المهني. تجربة رائعة!",
     rating: 5,
-    avatar: "LK"
+    avatar: "ل.ك"
   },
   {
-    name: "Ahmed Nasser",
-    role: "Author",
-    content: "Publishing my e-books on LibyanaHub was the best decision. The built-in audience and marketing tools are fantastic!",
+    name: "أحمد ناصر",
+    role: "مدرس رياضيات",
+    content: "أقدم دروس خصوصية لطلاب من مختلف المراحل الدراسية. النظام منظم وسهل التعامل معه.",
     rating: 5,
-    avatar: "AN"
+    avatar: "أ.ن"
   }
 ];
 
@@ -53,10 +53,10 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl sm:text-5xl font-bold font-heading mb-4 text-gradient">
-            Loved by Creators & Users
+            قصص نجاح ملهمة
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied community members
+            انضم لآلاف المبدعين والمتعلمين الراضين عن تجربتهم
           </p>
         </div>
 
@@ -68,27 +68,27 @@ const Testimonials = () => {
               className="p-8 relative overflow-hidden hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
               {/* Quote Icon */}
-              <Quote className="absolute top-4 right-4 w-12 h-12 text-primary/10" />
+              <Quote className="absolute top-4 left-4 w-12 h-12 text-primary/10" />
 
               {/* Avatar */}
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl mb-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl mb-4 mr-auto">
                 {testimonial.avatar}
               </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-end">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow text-yellow" />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-muted-foreground mb-6 italic">
+              <p className="text-muted-foreground mb-6 italic text-right">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
-              <div>
+              <div className="text-right">
                 <div className="font-semibold text-foreground">
                   {testimonial.name}
                 </div>
@@ -98,7 +98,7 @@ const Testimonials = () => {
               </div>
 
               {/* Decorative gradient */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-l from-primary via-secondary to-accent" />
             </Card>
           ))}
         </div>
@@ -106,8 +106,11 @@ const Testimonials = () => {
         {/* Trust Badge */}
         <div className="mt-16 text-center animate-fade-in">
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full glass-card">
+            <span className="text-muted-foreground">
+              انضم لأكثر من <strong className="text-foreground">١٠٬٠٠٠</strong> عضو سعيد
+            </span>
             <div className="flex -space-x-2">
-              {['SA', 'MA', 'FH', 'OI'].map((avatar, i) => (
+              {['س.أ', 'م.ع', 'ف.ح', 'ع.إ'].map((avatar, i) => (
                 <div 
                   key={i}
                   className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xs font-bold border-2 border-background"
@@ -116,9 +119,6 @@ const Testimonials = () => {
                 </div>
               ))}
             </div>
-            <span className="text-muted-foreground">
-              Join <strong className="text-foreground">10,000+</strong> happy community members
-            </span>
           </div>
         </div>
       </div>
