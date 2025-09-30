@@ -1,6 +1,7 @@
 import { Dumbbell, Heart, ChefHat, Palette, Briefcase, Video, BookOpen, ArrowLeft } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const categories = [
   {
@@ -8,7 +9,8 @@ const categories = [
     title: "التدريب الرياضي واللياقة",
     description: "برامج تدريب مخصصة مع مدربين محترفين",
     color: "from-orange-500 to-red-500",
-    stats: "2,500+ برنامج"
+    stats: "2,500+ برنامج",
+    link: "/fitness/coach-profile"
   },
   {
     icon: Heart,
@@ -72,8 +74,8 @@ const CategoryCards = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {categories.map((category, index) => {
             const Icon = category.icon;
-            return (
-              <Card 
+            const CardContent = (
+              <Card
                 key={index}
                 className="group relative overflow-hidden p-8 hover:shadow-card-hover transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-primary/20 hover:-translate-y-2"
               >
@@ -110,6 +112,14 @@ const CategoryCards = () => {
                 {/* Decorative Element */}
                 <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -ml-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
               </Card>
+            );
+            
+            return category.link ? (
+              <Link key={index} to={category.link} className="block">
+                {CardContent}
+              </Link>
+            ) : (
+              CardContent
             );
           })}
         </div>
