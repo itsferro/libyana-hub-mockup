@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "سارة أحمد",
     role: "مدربة لياقة بدنية",
-    content: "ليبيانا هب غيرت حياتي المهنية تماماً. استطعت الوصول لأكثر من ٥٠٠ متدرب وبناء مجتمع رائع!",
+    content: "ليبيانا هب غيرت حياتي المهنية تماماً. استطعت الوصول لأكثر من 500 متدرب وبناء مجتمع رائع!",
     rating: 5,
     avatar: "س.أ"
   },
@@ -107,7 +107,7 @@ const Testimonials = () => {
         <div className="mt-16 text-center animate-fade-in">
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full glass-card">
             <span className="text-muted-foreground">
-              انضم لأكثر من <strong className="text-foreground">١٠٬٠٠٠</strong> عضو سعيد
+              انضم لأكثر من <strong className="text-foreground">10,000</strong> عضو سعيد
             </span>
             <div className="flex -space-x-2">
               {['س.أ', 'م.ع', 'ف.ح', 'ع.إ'].map((avatar, i) => (

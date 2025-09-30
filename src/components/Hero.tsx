@@ -56,23 +56,23 @@ const Hero = () => {
               className="bg-white/10 backdrop-blur-md border-white/30 text-white hover:bg-white/20 text-lg px-8 py-6 rounded-full"
             >
               <Play className="ml-2" size={20} />
-              ابدأ بـ ٥٧٥٠ دينار/شهر
+              ابدأ بـ 5.750 دينار/شهر
             </Button>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto animate-fade-in">
             <div className="text-center">
-              <div className="text-4xl font-bold font-heading text-white mb-2">+١٠٬٠٠٠</div>
-              <div className="text-white/80">مبدع نشط</div>
+              <div className="text-4xl font-bold font-heading text-white mb-2">+10,000</div>
+              <div className="text-white/90">مبدع نشط</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold font-heading text-white mb-2">+٥٠٬٠٠٠</div>
-              <div className="text-white/80">محتوى متنوع</div>
+              <div className="text-4xl font-bold font-heading text-white mb-2">+50,000</div>
+              <div className="text-white/90">محتوى متنوع</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold font-heading text-white mb-2">٧</div>
-              <div className="text-white/80">فئات رئيسية</div>
+              <div className="text-4xl font-bold font-heading text-white mb-2">7</div>
+              <div className="text-white/90">فئات رئيسية</div>
             </div>
           </div>
         </div>

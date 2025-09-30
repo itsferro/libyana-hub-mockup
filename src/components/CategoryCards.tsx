@@ -8,49 +8,49 @@ const categories = [
     title: "التدريب الرياضي واللياقة",
     description: "برامج تدريب مخصصة مع مدربين محترفين",
     color: "from-orange-500 to-red-500",
-    stats: "٢٬٥٠٠+ برنامج"
+    stats: "2,500+ برنامج"
   },
   {
     icon: Heart,
     title: "الاستشارات الصحية والمراقبة",
     description: "استشارات طبية ومراقبة صحية مع أطباء مرخصين",
     color: "from-blue-500 to-cyan-500",
-    stats: "١٬٢٠٠+ طبيب"
+    stats: "1,200+ طبيب"
   },
   {
     icon: ChefHat,
     title: "الطبخ والوصفات",
     description: "وصفات احترافية ودروس طبخ مباشرة",
     color: "from-yellow-500 to-orange-400",
-    stats: "٨٬٠٠٠+ وصفة"
+    stats: "8,000+ وصفة"
   },
   {
     icon: Palette,
     title: "الفنون الإبداعية",
     description: "تعلم الرسم والموسيقى والتصوير والتصميم",
     color: "from-pink-500 to-purple-500",
-    stats: "٥٬٥٠٠+ درس"
+    stats: "5,500+ درس"
   },
   {
     icon: Briefcase,
     title: "التطوير المهني والوظيفي",
     description: "تطوير المهارات وبناء المسار الوظيفي",
     color: "from-indigo-600 to-blue-500",
-    stats: "٣٬٨٠٠+ دورة"
+    stats: "3,800+ دورة"
   },
   {
     icon: Video,
     title: "البث المباشر والدورات",
     description: "دورات تفاعلية مباشرة في جميع المجالات",
     color: "from-red-500 to-pink-500",
-    stats: "١٬٩٠٠+ بث مباشر"
+    stats: "1,900+ بث مباشر"
   },
   {
     icon: BookOpen,
     title: "التدريس والدروس الخصوصية",
     description: "دروس خصوصية في جميع المواد الدراسية",
     color: "from-green-500 to-teal-500",
-    stats: "٩٥٠+ مدرس"
+    stats: "950+ مدرس"
   }
 ];
 
